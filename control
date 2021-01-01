@@ -1,7 +1,7 @@
 Package: com.falcon.central
 Name: Central
 Depends: mobilesubstrate, preferenceloader, firmware (>= 13.0)
-Version: 1.1.1
+Version: 1.1.2
 Architecture: iphoneos-arm
 Description: Center the last row of icons on your home screen
 Maintainer: MrGcGamer

@@ -6,6 +6,7 @@
             doneWaitingForLoad = YES;
             // Get our original point for the current icon
             CGPoint o = %orig(arg1, arg2);
+            if ([self isEditing]) return o;
             if (!_pfTweakEnabled) return o;
             if (!([self.iconLocation containsString:@"Root"]) && !_pfChangeFolderLayout) return o;
             if (![self isKindOfClass:%c(_SBHLibraryPodCategoryIconListView)] && [self isKindOfClass:%c(_SBHLibraryPodIconListView)]) return o;
@@ -69,6 +70,7 @@
             doneWaitingForLoad = YES;
             // Get our original point for the current icon
             CGPoint o = %orig(arg1, arg2);
+            if ([self isEditing]) return o;
             if (!_pfTweakEnabled) return o;
             if (!([self.iconLocation containsString:@"Root"]) && !_pfChangeFolderLayout) return o;
 

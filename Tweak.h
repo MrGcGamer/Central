@@ -24,6 +24,7 @@ NSDictionary *prefs = nil;
 -(NSArray *)visibleIcons;
 -(void)layoutIconsNow;
 -(double)horizontalIconPadding;
+@property (assign,getter=isEditing,nonatomic) BOOL editing;
 @property (nonatomic,readonly) SBIconListGridLayout* layout; 
 @property (nonatomic, assign) NSUInteger firstFreeSlotIndex;
 @property (nonatomic, assign) NSInteger iconsInRowForSpacingCalculation;
