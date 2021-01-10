@@ -2,7 +2,7 @@ include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = Centralprefs
 
-Centralprefs_FILES = CRLRootListController.m DuoTwitterCell.m
+Centralprefs_FILES = CRLRootListController.m GcDuoTwitterCell.m
 Centralprefs_INSTALL_PATH = /Library/PreferenceBundles
 Centralprefs_FRAMEWORKS = UIKit
 Centralprefs_PRIVATE_FRAMEWORKS = Preferences

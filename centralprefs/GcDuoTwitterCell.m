@@ -1,8 +1,7 @@
+#import <Preferences/PSListController.h>
 #import <Preferences/PSSpecifier.h>
-#import <UIKit/UIImage+Private.h>
 #import <Foundation/Foundation.h>
-#import <UIKit/UIColor+Private.h>
-#import "DuoTwitterCell.h"
+#import "GcDuoTwitterCell.h"
 
 @implementation UIView (fconstraints)
 -(void)anchorTop:(nullable NSLayoutAnchor <NSLayoutYAxisAnchor *> *)top 
@@ -84,8 +83,10 @@
 	UILabel *accountNameTwo = [UILabel new];
 	UIView *separator = [UIView new];
 
-	UIImage *avatarImageOne = [UIImage imageNamed:[NSString stringWithFormat:@"/Library/PreferenceBundles/Centralprefs.bundle/%@.png", _accountNameOne]];
-	UIImage *avatarImageTwo = [UIImage imageNamed:[NSString stringWithFormat:@"/Library/PreferenceBundles/Centralprefs.bundle/%@.png", _accountNameTwo]];
+	PSListController *listController = (PSListController *)self.nextResponder.nextResponder.nextResponder;
+
+	UIImage *avatarImageOne = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@.png", [[listController bundle] bundlePath],_accountNameOne]];
+	UIImage *avatarImageTwo = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@.png", [[listController bundle] bundlePath],_accountNameTwo]];
 
 	[avatarViewOne setImage:avatarImageOne];
 	[avatarViewTwo setImage:avatarImageTwo];
